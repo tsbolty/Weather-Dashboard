@@ -3,9 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
-    <h1>TESTING</h1>
+    <div class= "container" id= "main">
+        <h2 id= "timer"></h2>
+        <h2 id= "score"></h2>
+        <div class="container" id="first-page">
+            <h1>Welcome to this quiz</h1>
+            <h2>Good luck</h2>
+            <p> Click the button to start the quiz. You will have 60 seconds to finish. If you answer a question incorrectly, 10 seconds will be taken away from the timer.</p>
+            <br>
+            <br>
+            <button type="button" class="btn btn-primary btn-lg" id="start-quiz-btn">START QUIZ</button>
+        </div>
+        <div class="container" id= "first-question-page">
+            <h1>What year was the declaration of independence signed?</h1>
+            <div id= "options1">
+                <button type="button" class="btn btn-outline-primary" value= "1864">1. 1864</button>
+                <br>
+                <button type="button" class="btn btn-outline-primary" value= "1700">2. 1700</button>
+                <br>
+                <button type="button" class="btn btn-outline-primary" value= "1776">3. 1776</button>
+                <br>
+                <button type="button" class="btn btn-outline-primary" value= "1767">4. 1767</button>
+            </div>
+        </div>
+        <div class="container" id= "second-question-page">
+            <h1>Which hockey team did Wayne Gretzky play for in the 80's?</h1>
+            <div id= "options2">
+                <button type="button" class="btn btn-outline-primary" value= "Chicago Blackhawks">1. Chicago Blackhawks</button>
+                <br>
+                <button type="button" class="btn btn-outline-primary" value= "Edmonton Oilers">2. Edmonton Oilers</button>
+                <br>
+                <button type="button" class="btn btn-outline-primary" value= "Pittsburgh Penguins">3. Pittsburgh Penguins</button>
+                <br>
+                <button type="button" class="btn btn-outline-primary" value= "Montreal Canadians">4. Montreal Canadians</button>
+            </div>
+
+        </div>
+        <div class="container" id= "third-question-page">
+            <h1>Which auto brand owns Bugatti, Lamborghini, Audi, Porsche and Ducati?</h1>
+            <div id= "options3">
+                <button type="button" class="btn btn-outline-primary" value= "BMW">1. BMW</button>
+                <br>
+                <button type="button" class="btn btn-outline-primary" value= "Mercedes Benz">2. Mercedes Benz</button>
+                <br>
+                <button type="button" class="btn btn-outline-primary" value= "Fiat">3. Fiat</button>
+                <br>
+                <button type="button" class="btn btn-outline-primary" value= "Volkswagen">4. Volkswagen</button>
+            </div>
+
+        </div>
+        <div class="container" id= "fourth-question-page">
+            <h1>Which country invented tea?</h1>
+            <div id= "options4">
+                <button type="button" class="btn btn-outline-primary" value= "India">1. India</button>
+                <br>
+                <button type="button" class="btn btn-outline-primary" value= "China">2. China</button>
+                <br>
+                <button type="button" class="btn btn-outline-primary" value= "UK">3. UK</button>
+                <br>
+                <button type="button" class="btn btn-outline-primary" value= "Japan">4. Japan</button>
+            </div>
+        </div>
+        <div class="container" id= "fifth-question-page">
+            <h1>What is the name of the longest river in the world?</h1>
+            <div id= "options5">
+                <button type="button" class="btn btn-outline-primary" value= "Nile River">1. Nile River</button>
+                <br>
+                <button type="button" class="btn btn-outline-primary" value= "Mississippi River">2. Mississippi River</button>
+                <br>
+                <button type="button" class="btn btn-outline-primary" value= "Amazon River">3. Amazon River</button>
+                <br>
+                <button type="button" class="btn btn-outline-primary" value= "Yellow River">4. Yellow River</button>
+            </div>
+        </div>
+        <div class= "container" id= "high-scores-page">
+            <h1>High Scores</h1>
+            <div class="form-group">
+                <label></label>
+                <textarea class="form-control" id="high-score-display-box" rows="3"></textarea>
+                <div id= "initials-submission-area">
+                    <h3>Enter your initials here</h3>
+                    <textarea class="form-control" id= "initials-box" rows="3" placeholder= "initials"></textarea>
+                    <button type="button" class="btn btn-outline-primary" id= "initials-submit-button">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+   <script src="logic.js"></script>
+   <script src="questions.js"></script>
 </body>
 </html>

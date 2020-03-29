@@ -1,0 +1,32 @@
+#first-page{
+    display: block;
+}
+#first-question-page{
+    display: none;
+}
+#second-question-page{
+    display: none;
+}
+#third-question-page{
+    display: none;
+}
+#fourth-question-page{
+    display: none;
+}#fifth-question-page{
+    display: none;
+}
+#high-scores-page{
+    display:none;
+}
+#initials-submission-area{
+    margin-top: 80px;
+}
+#high-score-display-box{
+    height: 300px;
+}
+#timer{
+    float: right;
+}
+#score{
+    float: right;
+}
