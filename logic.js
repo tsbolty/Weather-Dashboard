@@ -11,12 +11,13 @@ var fourthQuestionPage = document.getElementById("fourth-question-page")
 var fifthQuestionPage = document.getElementById("fifth-question-page")
 var highScoresPage = document.getElementById("high-scores-page")
 // Will need to print score to the page and increment it by 1
-var score = document.getElementById("#score");
+var scoreDiv = document.getElementById("score");
 var firstOptions = document.getElementById("options1");
 var secondOptions = document.getElementById("options2")
 var thirdOptions = document.getElementById("options3")
 var fourthOptions = document.getElementById("options4")
 var fifthOptions = document.getElementById("options5")
+var score = 0;
 
 
 // This turns makes the welcome screen go away and makes the first question page visible
@@ -27,6 +28,7 @@ startQuiz.addEventListener("click", function(){
 })
 
 
+
 // Creating the timer, used in startQuiz function
 var timer = document.getElementById("timer");
 var secondsLeft = 60;
@@ -35,7 +37,8 @@ function setTime(){
     var timeInterval = setInterval(function(){
         secondsLeft--;
         timer.textContent = "Time left " + secondsLeft;
-        if(secondsLeft < 0) {
+        scoreDiv.textContent = "Score = " +  score;
+        if(secondsLeft < 1) {
             clearInterval(timeInterval);
             outOfTime()
         }
@@ -47,13 +50,20 @@ function outOfTime(){
     main.textContent = "";
     var imgEl = document.createElement("img");
     imgEl.setAttribute("src", "images/out-of-time.jpg");
-    imgEl.setAttribute("alt", "Gone fishing out of time picture")
+    imgEl.setAttribute("alt", "Gone fishing out of time picture");
     main.appendChild(imgEl);
+}
+
+function endOfGame(){
+    fifthQuestionPage.style.display ="none";
+    highScoresPage.style.display = "block";
+    timer.style.display = "none";
+    
 }
 
 // Creating an add event listener to the buttons in the list and comparing the button clicked to the index of the correct answer in our questions array.
 
-// ASK BRIAN WHY IF I CLICK ANYWHERE ELSE IN THE PARENT ELEMENT IT SHOWS A SCREEN WITH THE NUMBER 0
+
 firstOptions.addEventListener("click", function(event){
     event.preventDefault();
     var element = event.target;
@@ -65,6 +75,9 @@ firstOptions.addEventListener("click", function(event){
             alert("correct!")
             firstQuestionPage.style.display = "none";
             secondQuestionPage.style.display = "block";
+            score++
+            
+            console.log(score)
         } else {
             alert("incorrect")
             firstQuestionPage.style.display = "none";
@@ -86,12 +99,14 @@ secondOptions.addEventListener("click", function(event){
             alert("correct!")
             secondQuestionPage.style.display = "none";
             thirdQuestionPage.style.display ="block";
+            score+=1
         } else {
             alert("incorrect")
             secondQuestionPage.style.display = "none";
             thirdQuestionPage.style.display ="block";
             secondsLeft -= 10;
         }
+
     }
 })
 
@@ -105,6 +120,7 @@ thirdOptions.addEventListener("click", function(event){
             alert("correct!")
             thirdQuestionPage.style.display = "none";
             fourthQuestionPage.style.display ="block";
+            score+=1
         } else {
             alert("incorrect")
             thirdQuestionPage.style.display = "none";
@@ -125,6 +141,7 @@ fourthOptions.addEventListener("click", function(event){
             alert("correct!")
             fourthQuestionPage.style.display = "none";
             fifthQuestionPage.style.display ="block";
+            score+=1
         } else {
             alert("incorrect")
             fourthQuestionPage.style.display = "none";
@@ -141,14 +158,19 @@ fifthOptions.addEventListener("click", function(event){
     if (element.matches("button")){
         var userAnswer = element.value;
         if( userAnswer === questions[4].correctAnswer5){
+            score+=1
             alert("correct!")
             fifthQuestionPage.style.display = "none";
-            highScoresPage.style.display ="block";
+            secondsLeft=1
+            clearInterval(secondsLeft)
+            endOfGame()
+            
         } else {
             alert("incorrect")
             fifthQuestionPage.style.display = "none";
-            highScoresPage.style.display ="block";
-            secondsLeft -= 10;
+            secondsLeft=1
+            clearInterval(secondsLeft)
+            endOfGame()
         }
     }
     
