@@ -2,7 +2,7 @@
 
 I created a welcome page with a button to start he quiz
 
-on start of that button, it sets the display of that div to none and sets the first question page to block
+on click of that button, it sets the display of that div to none and sets the first question page to block
 
 I know it could have been done more dynamically, but that's what I did to rotate between each question page.
 
