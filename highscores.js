@@ -11,6 +11,7 @@ var initialsBox = document.getElementById("initials-box")
     console.log("score" + score)
     var initials= initialsBox.value.trim();
     
+    
     localStorage.setItem("score", JSON.stringify(score) );
     var printScore = JSON.parse(localStorage.getItem("score"));
     localStorage.setItem("initials", JSON.stringify(initials));

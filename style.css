@@ -3,17 +3,23 @@
 }
 #first-question-page{
     display: none;
+    margin-bottom: 50px;
 }
 #second-question-page{
     display: none;
+    margin-bottom: 50px;
 }
 #third-question-page{
     display: none;
+    margin-bottom: 50px;
 }
 #fourth-question-page{
     display: none;
-}#fifth-question-page{
+    margin-bottom: 50px;
+}
+#fifth-question-page{
     display: none;
+    margin-bottom: 50px;
 }
 #high-scores-page{
     display:none;
@@ -27,5 +33,7 @@
 #timer{
     float: right;
 }
-#score{
+footer{
+    font-size: .5em;
+    float: bottom;
 }

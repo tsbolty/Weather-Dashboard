@@ -4,9 +4,9 @@
 
 var questions = [
 {
-    "question1": "What year was the declaration of independence signed?",
-    "options1": ["1864", "1700", "1776", "1767"],
-    "correctAnswer1": "1776"
+    "question1": "How much effort did I put into this quiz?",
+    "options1": ["d effort", "c effort", "A+ effort", "B effort"],
+    "correctAnswer1": "A+ effort"
 },
 {
     "question2": "Which hockey team did Wayne Gretzky play for in the 80's?",

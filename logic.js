@@ -25,6 +25,7 @@ startQuiz.addEventListener("click", function(){
     firstPage.style.display = "none";
     firstQuestionPage.style.display = "block";
     setTime();
+    scoreDiv.textContent= "Score = 0"
 })
 
 
@@ -78,8 +79,6 @@ firstOptions.addEventListener("click", function(event){
             secondQuestionPage.style.display = "block";
             score++
             scoreDiv.textContent = "Score = " +  score;
-            
-            console.log(score)
         } else {
             alert("incorrect")
             firstQuestionPage.style.display = "none";
@@ -171,13 +170,25 @@ fifthOptions.addEventListener("click", function(event){
             clearInterval(secondsLeft)
             endOfGame()
             
+            
         } else {
             alert("incorrect")
             fifthQuestionPage.style.display = "none";
             secondsLeft=1
             clearInterval(secondsLeft)
+            if (score > 1){
             endOfGame()
+            }
         }
+    }
+    if (score === 5){
+        alert("Congratulations, you scored 5 out of 5!!!")
+    }
+    if (score === 0){
+        alert("Dang, you didn't do so well haha. You should probably go around again. Don't worry the timer is paused haha.")
+        fifthQuestionPage.style.display = "none";
+        firstQuestionPage.style.display = "block";
+
     }
     
 })
