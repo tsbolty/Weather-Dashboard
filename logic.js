@@ -37,7 +37,7 @@ function setTime(){
     var timeInterval = setInterval(function(){
         secondsLeft--;
         timer.textContent = "Time left " + secondsLeft;
-        scoreDiv.textContent = "Score = " +  score;
+        
         if(secondsLeft < 1) {
             clearInterval(timeInterval);
             outOfTime()
@@ -73,9 +73,11 @@ firstOptions.addEventListener("click", function(event){
         var userAnswer = element.value;
         if( userAnswer === questions[0].correctAnswer1){
             alert("correct!")
+
             firstQuestionPage.style.display = "none";
             secondQuestionPage.style.display = "block";
             score++
+            scoreDiv.textContent = "Score = " +  score;
             
             console.log(score)
         } else {
@@ -100,6 +102,7 @@ secondOptions.addEventListener("click", function(event){
             secondQuestionPage.style.display = "none";
             thirdQuestionPage.style.display ="block";
             score+=1
+            scoreDiv.textContent = "Score = " +  score;
         } else {
             alert("incorrect")
             secondQuestionPage.style.display = "none";
@@ -121,6 +124,7 @@ thirdOptions.addEventListener("click", function(event){
             thirdQuestionPage.style.display = "none";
             fourthQuestionPage.style.display ="block";
             score+=1
+            scoreDiv.textContent = "Score = " +  score;
         } else {
             alert("incorrect")
             thirdQuestionPage.style.display = "none";
@@ -142,6 +146,7 @@ fourthOptions.addEventListener("click", function(event){
             fourthQuestionPage.style.display = "none";
             fifthQuestionPage.style.display ="block";
             score+=1
+            scoreDiv.textContent = "Score = " +  score;
         } else {
             alert("incorrect")
             fourthQuestionPage.style.display = "none";
@@ -159,6 +164,7 @@ fifthOptions.addEventListener("click", function(event){
         var userAnswer = element.value;
         if( userAnswer === questions[4].correctAnswer5){
             score+=1
+            scoreDiv.textContent = "Score = " +  score;
             alert("correct!")
             fifthQuestionPage.style.display = "none";
             secondsLeft=1
