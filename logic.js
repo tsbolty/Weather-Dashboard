@@ -23,24 +23,19 @@ function searchWeather(search){
         searches.push(search)
         
         $("#city-name").text(search+ " " +moment().format("dddd, MMMM Do YYYY"))
-        // temp
         $("#temp").text("Temperature: " +data.main.temp+ "° Fahrenheit")
-        // humidity
         $("#humidity").text("Humidity: "+data.main.humidity+"%")
-        // wind speed
         $("#wind-speed").text("Wind: " +data.wind.speed+" mph")
         forecast(search)
         uvSearch(data.coord.lat, data.coord.lon)
     })
 }
 
-
 $(".history").on("click", "li", function(event){
     event.preventDefault()
     searchWeather($(this).text())
 })
 
-// try to prepend the creation of the button
 function createBtn(searchVal){
     
     var button = $("<button>").text(searchVal)
@@ -54,9 +49,7 @@ function uvSearch(lat, lon){
         url: `http://api.openweathermap.org/data/2.5/uvi?appid=5daa520299ac74c142ce2d492d9e2ed7&lat=${lat}&lon=${lon}`,
         dataType: "json"
     }).then(function(response){
-        //$("#uv").text(response.value)
         var btn= $("<span>").addClass("btn btn-sm").text(response.value)
-
         
         if (response.value > 7.99){
             btn.addClass("btn-danger")
@@ -85,6 +78,7 @@ function forecast(search){
             var threeDayForward = new moment().add(3, 'day');
             var fourDayForward = new moment().add(4, 'day');
             var fiveDayForward = new moment().add(5, 'day');
+            $("#todays-icon").attr("src", `http://openweathermap.org/img/wn/${weatherIcon}@2x.png`)
             $("#day1-date").text(oneDayForward.format('dddd MMMM DD'))
             $("#day2-date").text(twoDayForward.format('dddd MMMM DD'))
             $("#day3-date").text(threeDayForward.format('dddd MMMM DD'))
