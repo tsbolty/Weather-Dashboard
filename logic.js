@@ -12,7 +12,7 @@ function searchWeather(search){
     console.log("search term: "+search)
     $.ajax({
         type: "GET",
-        url: `http://api.openweathermap.org/data/2.5/weather?q=${search}&units=imperial&appid=5daa520299ac74c142ce2d492d9e2ed7`,
+        url: `https://api.openweathermap.org/data/2.5/weather?q=${search}&units=imperial&appid=5daa520299ac74c142ce2d492d9e2ed7`,
         dataType: "json"
     }).then(function(data){
         if (searches.includes(search)){
@@ -46,11 +46,11 @@ function createBtn(searchVal){
 function uvSearch(lat, lon){
     $.ajax({
         type: "GET",
-        url: `http://api.openweathermap.org/data/2.5/uvi?appid=5daa520299ac74c142ce2d492d9e2ed7&lat=${lat}&lon=${lon}`,
+        url: `https://api.openweathermap.org/data/2.5/uvi?appid=5daa520299ac74c142ce2d492d9e2ed7&lat=${lat}&lon=${lon}`,
         dataType: "json"
     }).then(function(response){
         var btn= $("<span>").addClass("btn btn-sm").text(response.value)
-        
+
         if (response.value > 7.99){
             btn.addClass("btn-danger")
         } else if(response.value <7.98 && response.value >6){
@@ -64,7 +64,7 @@ function uvSearch(lat, lon){
 function forecast(search){
     $.ajax({
         type: "GET",
-        url: `http://api.openweathermap.org/data/2.5/forecast?q=${search}&units=imperial&appid=5daa520299ac74c142ce2d492d9e2ed7`,
+        url: `https://api.openweathermap.org/data/2.5/forecast?q=${search}&units=imperial&appid=5daa520299ac74c142ce2d492d9e2ed7`,
         dataType: "json"
     }).then(function(data){
         for(i=0; i<6; i++){
@@ -78,13 +78,13 @@ function forecast(search){
             var threeDayForward = new moment().add(3, 'day');
             var fourDayForward = new moment().add(4, 'day');
             var fiveDayForward = new moment().add(5, 'day');
-            $("#todays-icon").attr("src", `http://openweathermap.org/img/wn/${weatherIcon}@2x.png`)
+            $("#todays-icon").attr("src", `https://openweathermap.org/img/wn/${weatherIcon}@2x.png`)
             $("#day1-date").text(oneDayForward.format('dddd MMMM DD'))
             $("#day2-date").text(twoDayForward.format('dddd MMMM DD'))
             $("#day3-date").text(threeDayForward.format('dddd MMMM DD'))
             $("#day4-date").text(fourDayForward.format('dddd MMMM DD'))
             $("#day5-date").text(fiveDayForward.format('dddd MMMM DD'))
-            $(`#day${[i]}-icon`).attr("src", `http://openweathermap.org/img/wn/${weatherIcon}@2x.png`)
+            $(`#day${[i]}-icon`).attr("src", `https://openweathermap.org/img/wn/${weatherIcon}@2x.png`)
             $(`#day${[i]}-temp`).text(`Temperature: ${forecastTemp}° Fahrenheit`)
             $(`#day${[i]}-humidity`).text(`Humidity: ${forecastHumidity}%`)
         }
