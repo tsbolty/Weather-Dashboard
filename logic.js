@@ -9,7 +9,6 @@ $("#search-btn").on("click", function(event){
     searchWeather(cityName)
 })
 function searchWeather(search){
-    console.log("search term: "+search)
     $.ajax({
         type: "GET",
         url: `https://api.openweathermap.org/data/2.5/weather?q=${search}&units=imperial&appid=5daa520299ac74c142ce2d492d9e2ed7`,
