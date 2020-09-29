@@ -1,13 +1,35 @@
-# 06-Server-Side-APIs
 
-This website is capable of getting an input from the user in the form of a city name and displaying the weather for that day and the 5 day forecast.
+  # Weather Dashboard
+  [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/tsbolty/weather-dashboard)
+  
+  ## Description
+  This application allows the user to input a city and retrieve the current day's weather and the 5 day weather forecast. Previous searches will also be saved and are able to be clicked on to retrieve that city's weather data again.
 
-It will display the city name and date on the top of the page, followed by the temperature, wind speed, humidity and UV index.
+  ## Table of Contents
 
-It will also display the five day forecast with the average temperature and humidity.
+  * Installation
+  * Usage
+  * License
+  * Contributing
+  * Tests
+  * Questions
+  
 
-It will show easy to see icons representing the type of weather expected that day.
+  To install necessary dependencies run the following command: npm i
 
-Each city the user inputs will create a button to be clicked when the user would like to see the weather conditions for that city again.
+  Usage: 
+  Type the name of the city in the search field. Do not include a state or country value.
 
-All elements of the page are created dynamically except for the header and search bar.
+  Contributing: 
+  Javascript, HTML, CSS, JQuery, AJAX
+  
+  To run tests, run the following command: 
+  npm test
+  
+  License: 
+  MIT
+  
+  <img src="https://avatars1.githubusercontent.com/u/59981106?v=4"></img>
+  
+  Creator Github account: [GitHub](https://api.github.com/users/tsbolty)
+  
