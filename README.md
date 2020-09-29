@@ -28,8 +28,6 @@
   
   License: 
   MIT
-  
-  <img src="https://avatars1.githubusercontent.com/u/59981106?v=4"></img>
-  
+    
   Creator Github account: [GitHub](https://api.github.com/users/tsbolty)
   
