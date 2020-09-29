@@ -14,3 +14,6 @@ var initialsBox = document.getElementById("initials-box")
     
   }
 )
+
+highScoreDisplayBox.textContent(JSON.parse(localStorage.getItem("score")))
+highScoreDisplayBox.textContent(JSON.parse(localStorage.getItem("initials")))

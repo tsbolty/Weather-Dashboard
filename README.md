@@ -1,19 +1,35 @@
-# 04_Web_APIs_homework
 
-I created a welcome page with a button to start he quiz
+  # Weather Dashboard
+  [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/tsbolty/weather-dashboard)
+  
+  ## Description
+  This application allows the user to input a city and retrieve the current day's weather and the 5 day weather forecast. Previous searches will also be saved and are able to be clicked on to retrieve that city's weather data again.
 
-on click of that button, it sets the display of that div to none and sets the first question page to block
+  ## Table of Contents
 
-I know it could have been done more dynamically, but the finished product works perfectly.
+  * Installation
+  * Usage
+  * License
+  * Contributing
+  * Tests
+  * Questions
+  
 
-after the quiz is started, it shows your score at the top of the page and starts a 60 second timer in the right corner.
+  To install necessary dependencies run the following command: npm i
 
-upon click of a choice option, it will allert the user if the answer was correct or incorrect and add 1 to the score if the answer was correct. If the answer was not correct, it will deduct 10 seconds from the timer
+  Usage: 
+  Type the name of the city in the search field. Do not include a state or country value.
 
-this goes on for 5 questions.
-
-If the time runs out, it will discard any text on the screen and display an image.
-
-if you successfully complete the page, you will be taken to a page where you can input your initials in the input box, and your initials and your score will be displayed in the high score area.
-
-If you score 0 answers correct, the timer will pause and you will be looped through the quiz again. the quiz will not end until you get at least one questoin correct.
+  Contributing: 
+  Javascript, HTML, CSS, JQuery, AJAX
+  
+  To run tests, run the following command: 
+  npm test
+  
+  License: 
+  MIT
+  
+  <img src="https://avatars1.githubusercontent.com/u/59981106?v=4"></img>
+  
+  Creator Github account: [GitHub](https://api.github.com/users/tsbolty)
+  
